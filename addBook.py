@@ -32,7 +32,6 @@ def addBook(book, apiKey):
         raise Exception(f"Error code {r.status_code} and text {r.text}, while trying to add book {book}.")
 
 apiKey = getAuthToken()
-#print(apiKey)
 
 mid = input ('Masukkan idnya: ')
 mnama = input ('Masukkan title bukunya: ')
@@ -42,5 +41,4 @@ misbn = input ('Masukkan isbn bukunya: ')
 mid1 = int(mid)
 
 book = {"id":mid1, "title": mnama, "author": mauthor, "isbn": misbn}
-#book = {"id":4, "title": "judulbuku", "author": "pengarang", "isbn": "12165465"}
 addBook(book, apiKey)
