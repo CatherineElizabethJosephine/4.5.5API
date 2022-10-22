@@ -9,10 +9,6 @@ PASSWORD = "Cisco123!"
 def listSpesificBook(midl):
     r = requests.get(
         f"{APIHOST}/api/v1/books/{midl}"
-        # headers = {
-        #     "Content-type": "application/json",
-        #     "X-API-Key": apiKey
-        #     },
     )
     if r.status_code == 200:
         return r.json()
