@@ -35,4 +35,4 @@ apiKey = getAuthToken()
 #print(apiKey)
 
 midd = input("Masukkan id yang ingin dihapus: ")
-apiDelete = deleteBook(apiKey)
+apiDelete = deleteBook(apiKey,midd)
