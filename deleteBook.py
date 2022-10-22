@@ -32,7 +32,6 @@ def deleteBook(apiToken, midd):
         raise Exception(f"Error code {r.status_code} and text {r.text}, while trying to add book {book}.")
 
 apiKey = getAuthToken()
-#print(apiKey)
 
 midd = input("Masukkan id yang ingin dihapus: ")
 apiDelete = deleteBook(apiKey,midd)
