@@ -34,11 +34,13 @@ def addBook(book, apiKey):
 apiKey = getAuthToken()
 #print(apiKey)
 
-#mid = input ('Masukkan idnya: ')
+mid = input ('Masukkan idnya: ')
 mnama = input ('Masukkan title bukunya: ')
 mauthor = input ('Masukkan author bukunya: ')
 misbn = input ('Masukkan isbn bukunya: ')
 
-book = {"id":4, "title": mnama, "author": mauthor, "isbn": misbn}
+mid1 = int(mid)
+
+book = {"id":mid1, "title": mnama, "author": mauthor, "isbn": misbn}
 #book = {"id":4, "title": "judulbuku", "author": "pengarang", "isbn": "12165465"}
 addBook(book, apiKey)
