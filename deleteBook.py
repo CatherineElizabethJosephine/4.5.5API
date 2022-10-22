@@ -17,15 +17,16 @@ def getAuthToken():
     else:
         raise Exception(f"Status code {r.status_code} and text {r.text}, while trying to Auth.")
 
-def deleteBook(apiToken):
+def deleteBook(apiToken, midd):
     r = requests.delete(
-        f"{APIHOST}/api/v1/books/0", 
+        f"{APIHOST}/api/v1/books/{midd}", 
         headers = {
             "Content-type": "application/json",
             "X-API-Key": apiKey
         },
     )
     if r.status_code == 200:
+        print("Berhasil menghapus id: " + midd)
         return r.json()
     else:
         raise Exception(f"Error code {r.status_code} and text {r.text}, while trying to add book {book}.")
@@ -33,4 +34,5 @@ def deleteBook(apiToken):
 apiKey = getAuthToken()
 #print(apiKey)
 
+midd = input("Masukkan id yang ingin dihapus: ")
 apiDelete = deleteBook(apiKey)
