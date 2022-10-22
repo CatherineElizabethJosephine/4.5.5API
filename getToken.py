@@ -22,4 +22,4 @@ def getAuthToken():
 
 # Get the Auth Token Key
 apiKey = getAuthToken()
-print(apiKey)
+print("Token: " + apiKey)
