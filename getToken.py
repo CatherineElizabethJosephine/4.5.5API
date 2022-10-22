@@ -2,7 +2,6 @@
 
 import requests
 import json
-from faker import Faker
 
 
 APIHOST = "http://library.demo.local"
